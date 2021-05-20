@@ -1,0 +1,264 @@
+@font-face {
+    font-family: "playerfont";
+    src: url('../font/square_pixel-7.ttf');
+}
+
+body{
+    /* background-image: radial-gradient(circle, rgba(25, 136, 247, 0.25) 0%, rgba(180, 148, 255, 1) 100%); */
+background-image: url(../img/ciel_ehri.png);
+font-family: "playerfont";
+font-size: larger;
+}
+/* .container {
+    display : grid;
+    grid-template-columns: 2fr ;
+    grid-template-rows: 1fr 4fr auto;
+   grid-template-areas:"tittle""score""game";
+} */
+/* .container {
+  display : grid;
+  grid-template-columns: 2fr ;
+  grid-template-rows: 1fr 4fr auto;
+ grid-template-areas:"tittle""score""game";
+} */
+
+h1 {
+    grid-area: tittle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+  #containerBoard {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width:40%;
+    text-align:center;
+    justify-content: center;
+    vertical-align: middle; 
+    row-gap: 5px color;
+    column-gap: 20px;
+    border: 1px solid black;
+       background-color: rgba(255, 255, 255, 0.986);
+       padding: 20px;
+  }
+
+  .board {
+       display: flex;
+       justify-content: center;
+       margin-right:26%;
+       margin-left: 26%; 
+  }
+ 
+  #name {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  #player1{
+    grid-column: 1/2;
+    grid-row: 2/3;
+    text-align: center;
+ 
+  }
+
+  #cpu{
+    grid-column: 1/2;
+    grid-row: 3/4;
+    text-align: center;  
+  }
+
+  #result{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  #score{
+   grid-column: 2/3;
+   grid-row: 2/3;
+   text-align: center;  
+  }  
+
+  #scoreOrdi{
+    grid-column: 2/3;
+    grid-row: 3/4;
+    text-align: center; 
+  }
+  
+  #victory{
+    grid-column: 3/4;
+    grid-row: 1/2;
+    text-align: center;
+  }
+
+  #victoirePlayer{
+    grid-column: 3/4;
+    grid-row: 2/3;
+  }
+
+  #victoireOrdi{
+    grid-column: 3/4;
+    grid-row: 3/4;
+  } 
+
+  #percent{
+    grid-column: 4/5;
+    grid-row: 1/2;
+  } 
+
+  #percentplayer{
+    grid-column: 4/5;
+    grid-row: 2/3;
+  }
+   #percentordi{
+    grid-column: 4/5;
+    grid-row: 3/4;
+  } 
+
+h1 {
+    grid-area:tittle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#board {
+    grid-area:score;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.game {
+    /* grid-area:game; */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 2fr 2fr 8fr 1fr 3fr;
+    grid-template-areas:"pic tools arena adverse pika";
+}
+
+.tools{
+   flex-direction: column;
+    grid-area: tools;
+    text-align: center;
+}
+
+.shifumi:hover {
+    filter:drop-shadow(10px 8px 8px  rgb(30, 131, 13));
+}
+
+li {
+    list-style: none;
+}
+
+#arena {
+    width: 100%;
+    grid-area: arena; 
+} 
+
+#resultat {
+  width:fit-content;
+    text-align: center;
+    align-items: center;
+    z-index:2;
+    position: relative;
+    grid-area: arena;
+    font-size: 2em;
+ 
+  }
+  #answer {
+    position: relative;
+    grid-area: arena;
+    text-align: right;
+    margin-right: 20%;
+    align-items: center;
+    z-index:1;
+  }
+
+#player {
+    grid-area:pic;
+    width:150%;
+}
+#monster {
+    grid-area: pika;
+    width: 100%;
+}
+.adversary {
+  grid-area: adverse;
+  flex-direction: column;
+}
+.shifumimonster{
+  text-align: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1500px) {
+
+  #containerBoard {
+    background-color: rgba(255, 255, 255, 0);
+    border: transparent;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .game {
+    /* justify-content: center;
+        align-items: center; */
+        /* display: inline-block; */
+    grid-template-columns: 1fr;
+  grid-template-rows: 0.5fr 0.5fr 2fr 0.5fr 0.5fr;
+  grid-template-areas:  "pic"
+                        "tools"
+                        "arena"
+                        "adverse "
+                        "pika";
+  }
+  .tools{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-evenly;
+
+  }
+  .shifumi {
+    width: 70%;
+
+  }
+  #monster{
+    width: 40%;
+    text-align:right;
+    align-items: right;
+    display: flex;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  #player{
+    width: 40%;
+    text-align: center;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  #resultat {
+    font-size: 1.3em;
+ 
+  }
+  .shifumimonster{
+    width: 70%;
+  }
+  .adversary{
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-evenly;
+
+  }
+  #answer {
+    width:30%;
+    margin-top: 20%;
+    text-align: right;
+    margin-right: 35%;
+    margin-left: 35%;
+    align-items:flex-end;
+    z-index:1;
+  }
+}

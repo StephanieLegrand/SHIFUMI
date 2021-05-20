@@ -1,17 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Document</title>
 </head>
+
 <body>
-    
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-<script src="assets/js/script.js"></script>
+  <div class="container">
+    <!-- <div>
+        <h1>Shifumi monster</h1>
+      </div>
+      <div id="board">
+        <div id="resultat"></div>
+        <div id="score">
+          <h2 id="scoreusertitre">Joueur : <span id="scoreuser">0</span></h2>
+          <h2 id="scoreordititre"><span id="scoreordi">0</span> : Ordi</h2>
+        </div>
+      </div> -->
+    <H1>SHI FU MI</H1>
+    <div class="board">
+      <div id="containerBoard">
+
+        <div id="victory">Victoire</div>
+        <div id="victoireOrdi">0</div>
+        <div id="victoirePlayer">0</div>
+        <div></div>
+
+
+        <div id="result">score</div>
+        <div id="scoreOrdi">0</div>
+        <div id="score">0</div>
+       
+
+        <div id="name">Joueurs</div>
+        <div id="player1">Joueur 1</div>
+        <div id="cpu">CPU</div>
+
+        <div id="percent"> % </div>
+        <div id="percentplayer">0%</div>
+        <div id="percentordi">0%</div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="game">
+    <div>
+      <img src="assets/img/bonhome_1.png" id="player">
+      
+    </div>
+    <div class="tools">
+      <li><img src="assets/img/stone.png" id="stone" class="shifumi"></li>
+      <li><img src="assets/img/paper.png" id="paper" class="shifumi"></li>
+      <li><img src="assets/img/scisors.png" id="scisors" class="shifumi"></li>
+    </div>
+      <img src="assets/img/Aren.png" alt="arena" id="arena">
+      <div id="resultat"></div>
+     <div id="answer"></div>
+    <div class="adversary">
+    <li><img src="assets/img/stonem.png" id="stonem" class="shifumimonster"></li>
+    <li><img src="assets/img/paperm.png" id="paperm" class="shifumimonster"></li>
+    <li><img src="assets/img/scisorsm.png" id="scisorsm" class="shifumimonster"></li>
+  </div>
+    <div>
+      <img src="assets/img/Sans_titre-1.png" id="monster">
+    </div>
+  </div>
+  </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="assets/js/script.js"></script>
 </body>
+
 </html>
