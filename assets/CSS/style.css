@@ -5,7 +5,9 @@
 
 body{
     /* background-image: radial-gradient(circle, rgba(25, 136, 247, 0.25) 0%, rgba(180, 148, 255, 1) 100%); */
-background-image: url(../img/ciel_ehri.png);
+ background-image: url(../img//font.jpg); 
+background-repeat: no-repeat;
+background-size: cover;
 font-family: "playerfont";
 font-size: larger;
 }
@@ -40,8 +42,8 @@ h1 {
     row-gap: 5px color;
     column-gap: 20px;
     border: 1px solid black;
-       background-color: rgba(255, 255, 255, 0.986);
-       padding: 20px;
+    background-color: rgba(255, 255, 255, 0.986);
+    padding: 20px;
   }
 
   .board {
@@ -137,8 +139,8 @@ h1 {
     display: grid;
     justify-content: center;
     align-items: center;
-    grid-template-columns: 2fr 2fr 8fr 1fr 3fr;
-    grid-template-areas:"pic tools arena adverse pika";
+    grid-template-columns: 2fr 8fr 2fr ;
+    grid-template-areas:"tools arena adverse";
 }
 
 .tools{
@@ -146,7 +148,10 @@ h1 {
     grid-area: tools;
     text-align: center;
 }
-
+.shifumi{
+  width: 100%; 
+  padding: 0em;
+}
 .shifumi:hover {
     filter:drop-shadow(10px 8px 8px  rgb(30, 131, 13));
 }
@@ -155,45 +160,65 @@ li {
     list-style: none;
 }
 
-#arena {
-    width: 100%;
-    grid-area: arena; 
-} 
-
 #resultat {
   width:fit-content;
     text-align: center;
     align-items: center;
-    z-index:2;
     position: relative;
     grid-area: arena;
     font-size: 2em;
+    z-index: 3;
+  width:auto;
+  justify-content: center;
+  padding: 1%;
+  margin: auto;
+  }
  
-  }
-  #answer {
-    position: relative;
-    grid-area: arena;
-    text-align: right;
-    margin-right: 20%;
-    align-items: center;
-    z-index:1;
-  }
-
-#player {
-    grid-area:pic;
-    width:150%;
-}
-#monster {
-    grid-area: pika;
+  #arena {
     width: 100%;
+    height: 100%;
+    grid-area: arena;
+    vertical-align: bottom;
+    display: grid;
+    grid-template-columns: 4fr 4fr;
+    grid-template-rows: 4fr;
+    grid-template-areas:"aren arenam";
+} 
+  #answer {
+    width: 80%;
+    position: relative;
+    grid-area: arenam;
+    text-align: right;
+    align-items:center;
+    vertical-align: middle;
+  
 }
-.adversary {
-  grid-area: adverse;
-  flex-direction: column;
+#answer img {
+  vertical-align: middle;
+  padding-top: 40%;
+  align-items:center;
 }
-.shifumimonster{
+#answer #paperm{
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  padding-top: 80%;
+}
+.adversary{
+   grid-area: adverse; 
+   flex-direction: column;
+}
+.arenam {
+grid-area: arenam;
+}
+.shifumim{ 
   text-align: center;
-  flex-direction: column;
+  width: 100%;
+  
+}
+.shifumimonster{ 
+  text-align: center;
+  width: 65%;
+  margin-top: 200px;
 }
 @media screen and (max-width: 1500px) {
 
@@ -252,6 +277,7 @@ li {
     justify-content: space-evenly;
 
   }
+
   #answer {
     width:30%;
     margin-top: 20%;
